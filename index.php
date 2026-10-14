@@ -1,5 +1,5 @@
 <?php
-$dataFile = __DIR__ . '/messages.csv';
+$dataFile = getenv('DATA_FILE') ?: (__DIR__ . '/messages.csv');
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
